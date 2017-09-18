@@ -263,16 +263,3 @@ footer {
 .l-LoginEngabe {
   text-align: center;
 }
-
-
-/*Ende des Login Css*/
-
-.check{
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  font-size: 100px;
-
-}
-
-/*Login sucessful end*/
