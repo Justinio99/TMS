@@ -1,11 +1,21 @@
 /*Header Css*/
+
 body {
   background-color: #e9ebee;
   margin: 0;
   overflow: hidden;
 }
-.container{
 
+.container {}
+
+.loginContainer {
+  margin-left: 20%;
+}
+
+@media screen and (max-width: 800px) {
+  .loginContainer {
+    margin-left: 5%;
+  }
 }
 
 .c-nav-bar-centerd {
@@ -13,14 +23,14 @@ body {
   overflow: hidden;
   height: 70px;
   background-color: white;
-  color:  #001155;
+  color: #001155;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
   position: relative;
-
 }
-.loginButton{
+
+.loginButton {
   float: right;
   font-size: 43px;
   position: relative;
@@ -37,34 +47,34 @@ body {
   position: absolute;
   right: -40%;
   line-height: 60px;
+}
+
+@media screen and (min-width: 1300px) {
+  .dropdown {
+    width: 20%;
   }
-  @media screen and (min-width: 1300px) {
-    .dropdown{
-      width: 20%;
-    }
+}
+
+@media screen and (max-width: 900px) {
+  .dropdown {
+    font-size: 18px;
   }
-    @media screen and (max-width: 900px){
-      .dropdown{
-        font-size: 18px;
-      }
-    }
+}
 
-  a{
-    color: #001155;
-    text-decoration: none;;
+a {
+  color: #001155;
+  text-decoration: none;
+  ;
+}
 
-  }
-  .dropdown ul {
+.dropdown ul {
+  padding-left: 10px;
+}
 
-padding-left: 10px;
-  }
-  #logo{
-    width: 125px;
-    float: left;
-  }
-
-
-
+#logo {
+  width: 125px;
+  float: left;
+}
 
 .hamburger {
   margin-top: 7px !important;
@@ -164,9 +174,12 @@ padding-left: 10px;
   transform: translate3d(0, 10px, 0) rotate(-45deg);
 }
 
+
 /*Ende des Header CSS*/
 
+
 /*Footer Css*/
+
 footer {
   position: fixed;
   right: 0;
@@ -178,25 +191,28 @@ footer {
   text-align: center;
 }
 
+
 /*Ende des Footer Css*/
 
+
 /*Home Css*/
+
 .h-txt-inhalt {
   text-align: center;
   margin: 10px 0px 20px 0px;
-
 }
+
 .h-txt-inhalt1 {
   text-align: center;
   padding-top: 60px;
-
 }
 
-.h-text{
+.h-text {
   font-size: 18px;
 }
-#h-button{
-      margin-left: 22px;
+
+#h-button {
+  margin-left: 22px;
 }
 
 .h-btn1 {
@@ -205,10 +221,9 @@ footer {
   padding: 20px 30px;
   width: 200px;
   border-radius: 10px;
-
   text-decoration: none;
-
 }
+
 .h-btn {
   background-color: #11AAFF;
   color: #ffffff;
@@ -217,20 +232,32 @@ footer {
   border-radius: 10px;
   margin-left: 20px;
   text-decoration: none;
-
 }
+
+
 /*Ende des Home Css*/
 
+
 /*Login Css*/
-.l-title{
+
+.l-title {
   text-align: center;
 }
 
-.l-image{
-text-align: center;
-}
-
-.l-LoginEngabe{
+.l-image {
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+  .l-image {
+    position: relative;
+    right: 60px;
+  }
+}
+
+.l-LoginEngabe {
+  text-align: center;
+}
+
+
 /*Ende des Login Css*/

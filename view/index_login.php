@@ -1,4 +1,5 @@
 <div class="l-image"><img src="images/logoTMS.png"></div>
+<div class="loginContainer">
 <h2>Login</h2>
 <form class="form-horizontal" action="/user/doCreate" method="post">
 	<div class="component" data-html="true">
@@ -24,3 +25,4 @@
 		</div>
 	</div>
 </form>
+</div>
