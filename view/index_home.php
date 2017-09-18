@@ -7,5 +7,5 @@
 
 <div class="h-txt-inhalt" >
 <button type="button" name="button" class="h-btn">Task Erfassen</button>
-<button type="button" name="button" class="h-btn">Benutzer Erfassen</button>
+<button id="h-button" type="button" name="button" class="h-btn">Benutzer Erfassen</button>
 </div>

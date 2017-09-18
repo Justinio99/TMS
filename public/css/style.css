@@ -4,6 +4,9 @@ body {
   margin: 0;
   overflow: hidden;
 }
+.container{
+  margin-top: 7%;
+}
 
 .c-nav-bar-centerd {
   width: 100%;
@@ -47,6 +50,10 @@ body {
   .dropdown ul {
 
 padding-left: 10px;
+  }
+  #logo{
+    width: 125px;
+    float: left;
   }
 
 
@@ -173,6 +180,9 @@ footer {
 
 .h-text{
   font-size: 18px;
+}
+#h-button{
+      margin-left: 22px;
 }
 
 .h-btn {

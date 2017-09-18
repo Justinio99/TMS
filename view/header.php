@@ -26,12 +26,15 @@
   <body>
 
 <div class="c-nav-bar-centerd">
+
   <button class="hamburger hamburger--spring " type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
+  <img id="logo" src="images/logoTMS.png">
   <h1><?= $heading ?></h1>
+
 </div>
 
 <div class="dropdown">
