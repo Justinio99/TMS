@@ -5,10 +5,10 @@
       <label class="col-md-2 control-label" >Benutzer </label>
       <div class="col-md-4">
       <select  class="form-control input-md">
-        <option value="volvo">Volvo XC90</option>
-        <option value="saab">Saab 95</option>
-        <option value="mercedes">Mercedes SLK</option>
-        <option value="audi">Audi TT</option>
+        <option value="volvo">Benutzer1</option>
+        <option value="saab">Benutzer2</option>
+        <option value="mercedes">Benutzer3</option>
+        <option value="audi">Benutzer4</option>
       </select>
 		</div>
   </div>
@@ -25,9 +25,15 @@
 		  </div>
 		</div>
 		<div class="form-group">
-		  <label class="col-md-2 control-label" for="password">Passwort</label>
+		  <label class="col-md-2 control-label" for="password">Start Datum</label>
 		  <div class="col-md-4">
-		  	<input id="password" name="password" type="password" placeholder="Passwort" class="form-control input-md">
+		  	<input id="dateStart" name="dateStart" type="date" placeholder="Start Datum" class="form-control input-md">
+		  </div>
+		</div>
+    <div class="form-group">
+		  <label class="col-md-2 control-label" for="password">Ende Datum</label>
+		  <div class="col-md-4">
+		  	<input id="dateEnd" name="dateStart" type="date" placeholder="Start Datum" class="form-control input-md">
 		  </div>
 		</div>
 		<div class="form-group">
