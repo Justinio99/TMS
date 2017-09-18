@@ -22,7 +22,7 @@
  *     - Daten welche z.B. von einem Formular kommen validieren und dem Model
  *         übergeben, damit sie in der Datenbank persistiert werden können.
  */
-class Login
+class LoginController
 {
     /**
      * Die index Funktion des DefaultControllers sollte in jedem Projekt
@@ -36,7 +36,7 @@ class Login
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
-        $view = new View('user_create');
+        $view = new View('index_login.php');
         $view->title = 'Login';
         $view->heading = 'Login';
         $view->display();
