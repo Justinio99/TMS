@@ -9,7 +9,7 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
@@ -33,12 +33,13 @@
   </button>
   <p>Home</p>
 </div>
+
 <div class="dropdown">
 <ul>
-  <div class"submenu ">Home</div>
-  <div class"submenu">Tasks</div>
-  <div class"submenu">Task erfassen</div>
-  <div class"submenu">Benutzer erfassen</div>
+<div class"submenu "><a href="#">Home</a></div>  <!--  Hier alle Webseiten eintragen -->
+  <div class"submenu"><a href="#">Tasks</a></div>
+  <div class"submenu"><a href="#">Task erfassen</a></div>
+  <div class"submenu"><a href="#">Benutzer erfassen</a></div>
 </ul>
 
 </div>

@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   height: 70px;
   background-color: white;
-  color: black;
+  color:  #001155;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
@@ -25,18 +25,30 @@ body {
   font-size: 30px;
   text-align: left;
   position: absolute;
-  right: -20%;
+  right: -40%;
   line-height: 60px;
+  }
+  @media screen and (min-width: 1300px) {
+    .dropdown{
+      width: 20%;
+    }
+  }
+    @media screen and (max-width: 900px){
+      .dropdown{
+        font-size: 18px;
+      }
+    }
+
+  a{
+    color: #001155;
+    text-decoration: none;;
 
   }
   .dropdown ul {
 
 padding-left: 10px;
   }
-  .submenu{
-    background-color: aqua;
 
-  }
 
 
 
