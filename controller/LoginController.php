@@ -36,9 +36,32 @@ class LoginController
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
-        $view = new View('index_login.php');
+        $view = new View('index_login');
         $view->title = 'Login';
         $view->heading = 'Login';
         $view->display();
+    }
+
+    public function doLogin(){
+
+      $userRepository = new UserRepository();
+
+      foreach ($userRepository->readAll() as $user) {
+        if ($user->benutzername == $_POST['benutzername']) {
+          if ($user->passwort == sha1($_POST['passwort'])){
+            $_SESSION['logged_in_user'] = $user->id;
+          } else {
+            $error = true;
+          }
+        }
+      }
+      $error = true;
+
+      $view = new View('index_login');
+      $view->title = 'Login';
+      $view->heading = 'Login';
+      $view->error = $error;
+      $view->display();
+
     }
 }
