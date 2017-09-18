@@ -36,7 +36,7 @@ class TaskErfassenController
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
-        $view = new View('TaskErfassen.php');
+        $view = new View('TaskErfassen');
         $view->title = 'Task Erfassen';
         $view->heading = 'Task Erfassen';
         $view->display();
