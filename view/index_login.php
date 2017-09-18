@@ -18,9 +18,9 @@
 		</div>
 
 		<div class="form-group">
-	      <label class="col-md-2 control-label" for="send"></label>
+	      <label class="col-md-2 control-label" for="Login"></label>
 		  <div class="col-md-4">
-		    <input id="login" name="login" type="submit" class="btn btn-primary">
+		    <button id="login" name="login" type="submit" class="btn btn-primary">Login</button>
 		  </div>
 		</div>
 	</div>
