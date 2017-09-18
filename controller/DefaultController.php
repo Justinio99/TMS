@@ -35,8 +35,9 @@ class DefaultController
     {
         if (isset($_SESSION['logged_in_user'])) {
           $view = new View('index_home');
-          $view->title = 'Login';
-          $view->heading = 'Login';
+          $view->user = $_SESSION['logged_in_user'];
+          $view->title = 'Home';
+          $view->heading = 'Home';
           $view->display();
         } else {
 

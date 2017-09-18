@@ -36,6 +36,7 @@ class TasksController
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('Tasks');
            $view->title = 'Tasks';
+           $view->user = $_SESSION['logged_in_user'];
            $view->heading = 'Tasks';
            $view->display();
          } else {

@@ -35,6 +35,7 @@ class TaskErfassenController
      {
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('TaskErfassen');
+           $view->user = $_SESSION['logged_in_user'];
            $view->title = 'Task Erfassen';
            $view->heading = 'Task Erfassen';
            $view->display();
