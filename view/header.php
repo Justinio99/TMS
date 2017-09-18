@@ -31,7 +31,7 @@
       <span class="hamburger-inner"></span>
     </span>
   </button>
-  <p>Home</p>
+  <h1><?= $heading ?></h1>
 </div>
 
 <div class="dropdown">
