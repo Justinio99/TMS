@@ -35,7 +35,7 @@
   </button>
   <img id="logo" src="images/logoTMS.png">
   <h1><?= $heading ?></h1>
-  <a href="/"><i class="fa fa-user-circle loginButton" aria-hidden="true"></i><a>
+  <a href="/login"><i class="fa fa-user-circle loginButton" aria-hidden="true"></i><a>
 
 </div>
 
