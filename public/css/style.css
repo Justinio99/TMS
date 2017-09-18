@@ -60,6 +60,7 @@ padding-left: 10px;
 
 
 .hamburger {
+  margin-top: 7px !important;
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
