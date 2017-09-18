@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-Awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
@@ -27,13 +28,14 @@
 
 <div class="c-nav-bar-centerd">
 
-  <button class="hamburger hamburger--spring " type="button">
+  <button class="hamburger hamburger--spring" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
   <img id="logo" src="images/logoTMS.png">
   <h1><?= $heading ?></h1>
+  <a href="/"><i class="fa fa-user-circle loginButton" aria-hidden="true"></i><a>
 
 </div>
 

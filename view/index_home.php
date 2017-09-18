@@ -5,7 +5,7 @@
 <p class="h-text">Wir entwickeln eine Task Management Webapplikation.<br/> In der man Tasks erfassen und Benutzern zuweisen kann.<br/> Die Tasks können auch bearbeitet werden.</p>
 </div>
 
-<div class="h-txt-inhalt" >
-<button type="button" name="button" class="h-btn">Task Erfassen</button>
-<button id="h-button" type="button" name="button" class="h-btn">Benutzer Erfassen</button>
+<div class="h-txt-inhalt1" >
+<a class="h-btn1" href="/TaskErfassen">Task Erfassen</a>
+<a class="h-btn" href="/benutzererfassen">Benutzer Erfassen</a>
 </div>
