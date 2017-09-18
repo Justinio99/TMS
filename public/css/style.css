@@ -220,3 +220,17 @@ footer {
 
 }
 /*Ende des Home Css*/
+
+/*Login Css*/
+.l-title{
+  text-align: center;
+}
+
+.l-image{
+text-align: center;
+}
+
+.l-LoginEngabe{
+  text-align: center;
+}
+/*Ende des Login Css*/
