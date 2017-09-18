@@ -22,7 +22,7 @@
  *     - Daten welche z.B. von einem Formular kommen validieren und dem Model
  *         übergeben, damit sie in der Datenbank persistiert werden können.
  */
-class BenutzerErfassenController
+class HomeController
 {
     /**
      * Die index Funktion des DefaultControllers sollte in jedem Projekt
@@ -34,9 +34,9 @@ class BenutzerErfassenController
      public function index()
      {
          if (isset($_SESSION['logged_in_user'])) {
-           $view = new View('BenutzerErfassen');
-           $view->title = 'Benutzer Erfassen';
-           $view->heading = 'Benutzer Erfassen';
+           $view = new View('index_home');
+           $view->title = 'Home';
+           $view->heading = 'Home';
            $view->display();
          } else {
 

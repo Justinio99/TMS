@@ -255,6 +255,11 @@ footer {
   }
 }
 
+#login{
+  background-color: #11AAFF;
+  border-color: #11AAFF;
+}
+
 .l-LoginEngabe {
   text-align: center;
 }

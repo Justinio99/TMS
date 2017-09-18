@@ -55,7 +55,7 @@ class ConnectionHandler
             $database = $config['database']['database'];
 
             // Verbindung initialisieren
-            self::$connection = new MySQLi($host, $username, $password, $database);
+            self::$connection = new MySQLi($host, $username, $password, $database, 3307);
             if (self::$connection->connect_error) {
                 $error = self::$connection->connect_error;
                 throw new Exception("Verbindungsfehler: $error");

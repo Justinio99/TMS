@@ -41,7 +41,7 @@
 
 <div class="dropdown">
 <ul>
-<div class"submenu "><a href="/">Home</a></div>  <!--  Hier alle Webseiten eintragen -->
+<div class"submenu "><a href="/Home">Home</a></div>  <!--  Hier alle Webseiten eintragen -->
   <div class"submenu"><a href="/Tasks">Tasks</a></div>
   <div class"submenu"><a href="/TaskErfassen">Task erfassen</a></div>
   <div class"submenu"><a href="benutzererfassen">Benutzer erfassen</a></div>

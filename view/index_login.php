@@ -1,19 +1,19 @@
 <div class="l-image"><img src="images/logoTMS.png"></div>
 <div class="loginContainer">
 <h2>Login</h2>
-<form class="form-horizontal" action="/user/doCreate" method="post">
+<form class="form-horizontal" action="/user/doLogin" method="post">
 	<div class="component" data-html="true">
 
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="lastName">Benutzername</label>
 		  <div class="col-md-4">
-		  	<input id="taskTitel" name="taskTitel" type="text" placeholder="Benutzername" class="form-control input-md">
+		  	<input id="taskTitel" name="benutzername" type="text" placeholder="Benutzername" class="form-control input-md">
 		  </div>
 		</div>
 		<div class="form-group">
-		  <label class="col-md-2 control-label" for="email">Passwort</label>
+		  <label class="col-md-2 control-label" for="password">Passwort</label>
 		  <div class="col-md-4">
-		  	<input id="password" name="password" type="password" placeholder="Passwort" class="form-control input-md">
+		  	<input id="password" name="passwort" type="password" placeholder="Passwort" class="form-control input-md">
 		  </div>
 		</div>
 
