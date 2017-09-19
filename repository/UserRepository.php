@@ -45,7 +45,7 @@ class UserRepository extends Repository
     }
 
 
-    // public function getAllUsers(){
+     public function getAllUsers(){
     //   $users = []
     //   $statement = ConnectionHandler::getConnection()->prepare($query);
     //   $statement = $dbh->("SELECT BENUTZERNAME FROM BENUTZER");
@@ -54,7 +54,7 @@ class UserRepository extends Repository
     //       array=push($users, $row)
     //     }
     //   }
-    // }
+     }
 
 
     public function selectBenutzer($benutzername)
