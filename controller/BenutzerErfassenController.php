@@ -46,6 +46,7 @@ class BenutzerErfassenController
          //   View Klasse beschrieben.
          $view = new View('index_login');
          $view->title = 'Login';
+         $view->user = $_SESSION['logged_in_user'];
          $view->heading = 'Login';
          $view->display();
        }
