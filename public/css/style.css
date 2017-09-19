@@ -263,3 +263,11 @@ footer {
 .l-LoginEngabe {
   text-align: center;
 }
+
+
+input:invalid {
+    border-color: red;
+}
+input:valid {
+    border-color: green;
+}
