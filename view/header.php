@@ -35,11 +35,7 @@
   </button>
   <img id="logo" src="images/logoTMS.png">
   <h1><?= $heading ?></h1>
-<<<<<<< HEAD
-=======
-  <p><?= var_dump($user); ?></p>
-  <a href="/login"><i class="fa fa-user-circle loginButton" aria-hidden="true"></i><a>
->>>>>>> a82b50b8f639aff36143aca2b200980ff7e02c95
+
 
 
 
@@ -47,7 +43,7 @@
 <div class="dropdown-logo">
   <i class="fa fa-user-circle loginButton" aria-hidden="true"></i>
   <div class="dropdown-content">
-      <a>Benutzer</a>
+      <a><p><?= var_dump($user); ?></p></a>
     <a href="#">Log out</a>
 
 
