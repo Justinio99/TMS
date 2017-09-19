@@ -262,16 +262,6 @@ footer {
 .l-LoginEngabe {
   text-align: center;
 }
-<<<<<<< HEAD
-
-
-input:invalid {
-    border-color: red;
-}
-input:valid {
-    border-color: green;
-}
-=======
 .dropdown-logo {
     position: relative;
     display: inline-block;
@@ -308,4 +298,11 @@ input:valid {
     background-color: #3e8e41;
 }
 /* Ende Logo Dropdown*/
->>>>>>> 98de01331f2e9fbeb3d84105dfe90f5c9f4f19f3
+
+/* Input Validierung*/
+input:invalid {
+    border-color: red;
+}
+input:valid {
+    border-color: green;
+}
