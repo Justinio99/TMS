@@ -1,5 +1,7 @@
 <?php
 
+require_once '../repository/UserRepository.php';
+
 /**
  * Siehe Dokumentation im DefaultController.
  */
@@ -15,7 +17,31 @@ class UserController
 
     public function doCreate()
     {
-      die("test");
+      //die("test");
+
+      // Werte aus $POST auslesen.
+      $benutzername = $_POST['benutzername'];
+      $vorname = $_POST['vorname'];
+      $nachname = $_POST['nachname'];
+      $password = $_POST['password'];
+      $passwordrepeat = $_POST['passwordrepeat'];
+      // validieren
+
+      if $password == $passwordrepeat{
+
+      }
+      else
+      {
+
+      }
+
+      //
+
+      $userrepository = new UserRepository();
+      $userid = $userrepository->create($firstName, $lastName, $email, $password)
+
+      // Seite mit Bestätigung.
+
         $view = new View('user_form');
         $view->title = 'Benutzer erstellen';
         $view->heading = 'Benutzer erstellen';
