@@ -5,10 +5,12 @@
       <label class="col-md-2 control-label" >Benutzer </label>
       <div class="col-md-4">
       <select  class="form-control input-md">
-        <option value="volvo">Benutzer1</option>
-        <option value="saab">Benutzer2</option>
-        <option value="mercedes">Benutzer3</option>
-        <option value="audi">Benutzer4</option>
+
+				<?php foreach($users as $key=>$value): ?>
+						<?php var_dump($users); ?>
+		        <option><?php echo $value; ?></option>
+		    <?php endforeach; ?>
+
       </select>
 		</div>
   </div>

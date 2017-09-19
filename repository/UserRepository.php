@@ -46,14 +46,18 @@ class UserRepository extends Repository
 
 
      public function getAllUsers(){
-    //   $users = []
-    //   $statement = ConnectionHandler::getConnection()->prepare($query);
-    //   $statement = $dbh->("SELECT BENUTZERNAME FROM BENUTZER");
-    //   if ($stmt->execute()){
-    //     while ($row = $stmt-> fetch()){
-    //       array=push($users, $row)
-    //     }
-    //   }
+       $users = [];
+
+       $query = "SELECT benutzername from $this->tableName";
+       $statement = ConnectionHandler::getConnection()->prepare($query);
+
+       if ($statement->execute()){
+         while ($row = $statement->fetch()) {
+           array_push($users, $row['benutzername']);
+         }
+       }
+
+       return $users;
      }
 
 

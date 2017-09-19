@@ -35,18 +35,15 @@ class TaskErfassenController
      {
            $repo = new UserRepository();
            $users = $repo->getAllUsers();
-           $view->users;
 
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('TaskErfassen');
            $view->user = $_SESSION['logged_in_user'];
            $view->title = 'Task Erfassen';
            $view->heading = 'Task Erfassen';
+           $view->users = $users;
            $view->display();
          } else {
-
-
-
          // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
          //   "default_index" rendern. Wie das genau funktioniert, ist in der
          //   View Klasse beschrieben.
