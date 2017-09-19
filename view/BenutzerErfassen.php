@@ -5,7 +5,7 @@
 		<div class="form-group">
 		  <label class="col-md-2 control-label">Benutzername</label>
 		  <div class="col-md-4">
-		  	<input id="benutzernameErfassen" name="benutzername" type="text" maxlength="50" minlenght="5" placeholder="Benutzername" pattern="[A-Za-z0-9$*%]{5,}" class="form-control input-md" required>
+		  	<input id="benutzernameErfassen" name="benutzername" type="text" maxlength="50" minlenght="5" placeholder="Benutzername" pattern="[A-Za-zäöüÄÜÖ0-9$*%#!?@]{5,50}" class="form-control input-md" required>
 		  </div>
 		</div>
 		<div class="form-group">
@@ -23,13 +23,13 @@
     <div class="form-group">
 		  <label class="col-md-2 control-label" for="password">Passwort</label>
 		  <div class="col-md-4">
-		  	<input id="password" name="password" type="password" placeholder="Passwort" maxlength="20" minlenght="5" class="form-control input-md" pattern="[A-Za-z0-9$*%]{5,20}" required>
+		  	<input id="password" name="password" type="password" placeholder="Passwort" maxlength="20" minlenght="5" class="form-control input-md" pattern="[A-Za-zäöüÄÜÖ0-9$*%#!?@]{5,20}" required>
 		  </div>
 		</div>
     <div class="form-group">
 		  <label class="col-md-2 control-label" for="password">Passwort wiederholen</label>
 		  <div class="col-md-4">
-		  	<input id="passwordRepeat" name="password" type="password" placeholder="Passwort wiederholen" maxlength="20" minlenght="5" class="form-control input-md" pattern="[A-Za-z0-9$*%]{5,20}" required>
+		  	<input id="passwordRepeat" name="password" type="password" placeholder="Passwort wiederholen" maxlength="20" minlenght="5" class="form-control input-md" pattern="[A-Za-zäöüÄÜÖ0-9$*%#!?@]{5,20}" required>
 		  </div>
 		</div>
 		<div class="form-group">
