@@ -43,7 +43,14 @@
 <div class="dropdown-logo">
   <i class="fa fa-user-circle loginButton" aria-hidden="true"></i>
   <div class="dropdown-content">
-      <a><p><?= $user ?></p></a>
+      <a><p><?php
+
+        if(empty($user)) {
+          echo $user;
+        } else {
+          echo 'Bitte Einloggen';
+        }?>
+      </p></a>
     <a href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true">    Log Out</i></a>
 
 

@@ -32,10 +32,10 @@ class UserRepository extends Repository
     {
         $password = sha1($password);
 
-        $query = "INSERT INTO $this->tableName (benutzername, vorname, nachname, passwort) VALUES ($benutzername, $vorname, $nachname, $password)";
+        $query = "INSERT INTO $this->tableName (benutzername, vorname, nachname, passwort) VALUES (?,?,?,?)";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param($benutzername, $vorname, $nachname, $password);
+        $statement->bind_param('ssss',$benutzername, $vorname, $nachname, $password);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);
@@ -43,4 +43,26 @@ class UserRepository extends Repository
 
         return $statement->insert_id;
     }
+
+
+    public function selectBenutzer($benutzername)
+    {
+      $query = "SELECT 'benutzername' from $Tabelle where benutzername = ?";
+
+      $statement = ConnectionHandler::getConnection()->prepare($query);
+      $statement->bind_param('s',$benutzername);
+
+      return $statement->execute();
+
+    }
+
+
+    public function delete(){
+        $query = "INSERT INTO $this->tableName (benutzername, vorname, nachname, passwort) VALUES (?,?,?,?)";
+    }
+
+    public function update(){
+
+    }
+
 }

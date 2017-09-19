@@ -16,7 +16,7 @@ class UserController
     }
 
 
-    public function doCreate()
+    public function doCreate(){
 
       //die("test");
 
@@ -28,9 +28,23 @@ class UserController
       $passwordrepeat = $_POST['passwordrepeat'];
       // validieren
 
+
+      $UserRepository = new UserRepository();
+      $benutzerexist = $UserRepository->selectBenutzer($benutzername);
+
+
       // Benutzername Validierung
       if (isset($benutzername) && !empty($benutzername))
-      {}
+      {
+        if ($benutzername == $benutzerexist)
+        {
+          
+        }
+        else
+        {
+          $AusgabeControl = 1;
+        }
+      }
       else
       {
         $AusgabeControl = 1;
@@ -67,14 +81,15 @@ class UserController
         $AusgabeControl = 1;
       }
 
-      if ($AusgabeControl = 0)
+
+      if (empty($AusgabeControl))
       {
 
               $userrepository = new UserRepository();
-              $userid = $userrepository->create($benutzername, $vorname, $nachname, $password)
+              $userid = $userrepository->create($benutzername, $vorname, $nachname, $password);
 
               $ausgabe = 'Der Benutzer wurde Erstellt!';
-              $titleAusgabe = 'Success'
+              $titleAusgabe = 'Success';
 
 
       }
@@ -87,6 +102,8 @@ class UserController
 
       $view = new View('ValidierungPage');
       $view->title = $titleAusgabe;
+      $view->user = $_SESSION['logged_in_user'];
+      $view->ausgabe = $ausgabe;
       $view->heading = $titleAusgabe;
       $view->display();
 
@@ -103,7 +120,7 @@ class UserController
 
       $_SESSION = [];
       setcookie(session_name(),'',1);
-      header("location:/")
+      header("location:/");
 
     }
 
