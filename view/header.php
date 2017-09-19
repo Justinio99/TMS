@@ -35,8 +35,18 @@
   </button>
   <img id="logo" src="images/logoTMS.png">
   <h1><?= $heading ?></h1>
-  <a href="/login"><i class="fa fa-user-circle loginButton" aria-hidden="true"></i><a>
 
+
+
+</div>
+<div class="dropdown-logo">
+  <i class="fa fa-user-circle loginButton" aria-hidden="true"></i>
+  <div class="dropdown-content">
+      <a>Benutzer</a>
+    <a href="#">Log out</a>
+
+
+  </div>
 </div>
 
 <div class="dropdown">
