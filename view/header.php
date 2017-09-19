@@ -15,7 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/jquery-3.2.1.min.js"></script>
-
+    <script src="/js/isotope-docs/isotope-docs/js/isotope-docs.min.js"></script>
     <script src="/js/header.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
