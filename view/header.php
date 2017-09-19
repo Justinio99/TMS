@@ -43,13 +43,8 @@
 <div class="dropdown-logo">
   <i class="fa fa-user-circle loginButton" aria-hidden="true"></i>
   <div class="dropdown-content">
-<<<<<<< HEAD
       <a><p><?= $user ?></p></a>
-    <a href="#">Log out</a>
-=======
-      <a><p><?= var_dump($user); ?></p></a>
     <a href="#"><i class="fa fa-sign-out" aria-hidden="true">    Log Out</i></a>
->>>>>>> f9bdcbe5598135eedde0fd9678a1233c7601feff
 
 
   </div>
