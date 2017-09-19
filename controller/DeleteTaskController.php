@@ -22,7 +22,7 @@
  *     - Daten welche z.B. von einem Formular kommen validieren und dem Model
  *         übergeben, damit sie in der Datenbank persistiert werden können.
  */
-class TaskErfassenController
+class DeleteTaskController
 {
     /**
      * Die index Funktion des DefaultControllers sollte in jedem Projekt
@@ -33,26 +33,20 @@ class TaskErfassenController
      */
      public function index()
      {
-           $repo = new UserRepository();
-           $users = $repo->getAllUsers();
-           $view->users;
-
          if (isset($_SESSION['logged_in_user'])) {
-           $view = new View('TaskErfassen');
+           $view = new View('deleteTask');
+           $view->title = 'Delete Task';
            $view->user = $_SESSION['logged_in_user'];
-           $view->title = 'Task Erfassen';
-           $view->heading = 'Task Erfassen';
+           $view->heading = 'Delete Task';
            $view->display();
          } else {
-
-
 
          // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
          //   "default_index" rendern. Wie das genau funktioniert, ist in der
          //   View Klasse beschrieben.
          $view = new View('index_login');
          $view->title = 'Login';
-        // $view->user = $_SESSION['logged_in_user'];
+         //$view->user = $_SESSION['logged_in_user'];
          $view->heading = 'Login';
          $view->display();
        }

@@ -36,11 +36,23 @@ class LoginController
         // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
         //   "default_index" rendern. Wie das genau funktioniert, ist in der
         //   View Klasse beschrieben.
+
+        if (!empty($user)){
         $view = new View('index_login');
         $view->title = 'Login';
         $view->user = $_SESSION['logged_in_user'];
         $view->heading = 'Login';
         $view->display();
+
+      }
+      else{
+        $view = new View('index_login');
+        $view->title = 'Login';
+        //$view->user = $_SESSION['logged_in_user'];
+        $view->heading = 'Login';
+        $view->display();
+
+      }
     }
 
 }

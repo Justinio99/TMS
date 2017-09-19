@@ -48,4 +48,4 @@
   </section>
 </article>
 <br>
-<a class="h-btn1" href="/">Task löschen</a>
+<a class="h-btn1" href="/deleteTask">Task löschen</a>

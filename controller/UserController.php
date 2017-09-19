@@ -36,7 +36,7 @@ class UserController
       // Benutzername Validierung
       if (isset($benutzername) && !empty($benutzername))
       {
-        if ($benutzername != $benutzerexist)
+        if ($benutzername !== $benutzerexist)
         {
 
         }
@@ -144,6 +144,17 @@ class UserController
         header('Location: /');
         die();
       }
+      else {
+        $ausgabe = 'Login Fehlgschlagen!';
+
+        $view = new View('ValidierungPage');
+        $view->title = 'Login Fehlgschlagen';
+        //$view->user = $_SESSION['logged_in_user'];
+        $view->ausgabe = $ausgabe;
+        $view->heading = 'Login Fehlgschlagen';
+        $view->display();
+      }
+
       $view = new View('index_login');
       $view->title = 'Login';
       $view->heading = 'Login';
