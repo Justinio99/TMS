@@ -8,6 +8,17 @@ body {
 
 .container {}
 
+  @media screen and (max-width: 450px) {
+    h1{
+      font-size: 18px;
+    }
+    #positonH1{
+      position: relative;
+right: 49px;
+    }
+
+  }
+
 .loginContainer {
   margin-left: 20%;
 }

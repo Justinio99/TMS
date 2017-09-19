@@ -34,7 +34,7 @@
     </span>
   </button>
   <img id="logo" src="images/logoTMS.png">
-  <h1><?= $heading ?></h1>
+  <div id="positonH1"><h1><?= $heading ?></h1></div>
 
 
 
