@@ -1,0 +1,22 @@
+.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+
+.grid{
+  width: 25%;
+  max-width: 25%;
+  max-height: 300px;
+  background-color: aqua;
+  margin-top: 12px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+ul li {
+  width: 100px;
+  height: 100px;
+}
