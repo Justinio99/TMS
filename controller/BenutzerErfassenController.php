@@ -36,6 +36,7 @@ class BenutzerErfassenController
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('BenutzerErfassen');
            $view->title = 'Benutzer Erfassen';
+           $view->user = $_SESSION['logged_in_user'];
            $view->heading = 'Benutzer Erfassen';
            $view->display();
          } else {

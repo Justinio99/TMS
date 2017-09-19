@@ -36,6 +36,7 @@ class HomeController
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('index_home');
            $view->title = 'Home';
+           $view->user = $_SESSION['logged_in_user'];
            $view->heading = 'Home';
            $view->display();
          } else {
