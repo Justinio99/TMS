@@ -8,6 +8,17 @@ body {
 
 .container {}
 
+  @media screen and (max-width: 450px) {
+    h1{
+      font-size: 18px;
+    }
+    #positonH1{
+      position: relative;
+right: 49px;
+    }
+
+  }
+
 .loginContainer {
   margin-left: 20%;
 }
@@ -276,9 +287,10 @@ footer {
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
 }
 
 .dropdown-content a {
@@ -288,7 +300,7 @@ footer {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #e9ebee}
 
 .dropdown-logo:hover .dropdown-content {
     display: block;
