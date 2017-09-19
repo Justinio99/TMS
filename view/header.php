@@ -11,7 +11,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-Awesome-4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="/css/task.css">
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/jquery-3.2.1.min.js"></script>
@@ -33,7 +33,7 @@
       <span class="hamburger-inner"></span>
     </span>
   </button>
-  <img id="logo" src="images/logoTMS.png">
+  <a href="/Home"><img id="logo" src="images/logoTMS.png"></a>
   <div id="positonH1"><h1><?= $heading ?></h1></div>
 
 

@@ -6,7 +6,11 @@ body {
   overflow: hidden;
 }
 
-.container {}
+.container {
+
+  height:100vh;
+
+}
 
   @media screen and (max-width: 450px) {
     h1{
@@ -290,7 +294,7 @@ footer {
     min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
+
 }
 
 .dropdown-content a {

@@ -1,22 +1,71 @@
-.grid-item { width: 25%; }
-.grid-item--width2 { width: 50%; }
+@import "compass/css3";
 
-.grid{
-  width: 25%;
-  max-width: 25%;
-  max-height: 300px;
-  background-color: aqua;
-  margin-top: 12px;
-}
+*, *:before, *:after {box-sizing:  border-box !important;}
 
-ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+article {
+ -moz-column-width: 13em;
+ -webkit-column-width: 13em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap: 1em;
 
 }
 
-ul li {
-  width: 100px;
-  height: 100px;
+section {
+ display: inline-block;
+ margin:  0.25rem;
+ padding:  1rem;
+ width:  100%;
+ height: 100%;
+ background:   #11AAFF;
+ border-radius: 6px;
+}
+
+
+p {
+ margin:  1rem 0;
+}
+
+
+
+
+/*  styles for background color, etc; not necessary for this thing to work  */
+
+
+
+
+h1 {
+  font-size:  3rem;
+  font-weight:  800;
+}
+
+body {
+  line-height:  1.2;
+}
+
+
+.p {
+ text-align:  left;
+}
+
+/* NavBar filter */
+.filter{
+  float: right;
+}
+.il{
+float: left;
+}
+.ul{
+  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #333;
+}
+.li a{
+  display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none
 }
