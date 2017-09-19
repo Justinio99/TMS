@@ -28,14 +28,14 @@ class UserRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($firstName, $lastName, $email, $password)
+    public function create($benutzername, $vorname, $nachname, $password)
     {
         $password = sha1($password);
 
-        $query = "INSERT INTO $this->tableName (benutzername, vorname, nachname, password) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO $this->tableName (benutzername, vorname, nachname, passwort) VALUES ($benutzername, $vorname, $nachname, $password)";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $firstName, $lastName, $email, $password);
+        $statement->bind_param($benutzername, $vorname, $nachname, $password);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);

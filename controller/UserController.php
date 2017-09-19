@@ -9,14 +9,15 @@ class UserController
 {
     public function index()
     {
-      var_dump($_SESSION['logged_in_user']);
-      die();
+      // var_dump($_SESSION['logged_in_user']);
+      // die();
         // Anfrage an die URI /user/crate weiterleiten (HTTP 302)
         header('Location: /user/create');
     }
 
+
     public function doCreate()
-    {
+
       //die("test");
 
       // Werte aus $POST auslesen.
@@ -27,25 +28,83 @@ class UserController
       $passwordrepeat = $_POST['passwordrepeat'];
       // validieren
 
-      if $password == $passwordrepeat{
+      // Benutzername Validierung
+      if (isset($benutzername) && !empty($benutzername))
+      {}
+      else
+      {
+        $AusgabeControl = 1;
+      }
+
+      // Vorname Validierung
+      if (isset($vorname) && !empty($vorname))
+      {}
+      else
+      {
+        $AusgabeControl = 1;
+      }
+
+      // Nachname Validierung
+      if (isset($nachname) && !empty($nachname))
+      {}
+      else
+      {
+        $AusgabeControl = 1;
+      }
+
+      // Passwort Validierung
+      if (isset($password) && !empty($password) && isset($passwordrepeat) && !empty($passwordrepeat))
+      {
+        if ($password == $passwordrepeat)
+        {}
+        else
+        {
+          $AusgabeControl = 1;
+        }
+      }
+      else
+      {
+        $AusgabeControl = 1;
+      }
+
+      if ($AusgabeControl = 0)
+      {
+
+              $userrepository = new UserRepository();
+              $userid = $userrepository->create($benutzername, $vorname, $nachname, $password)
+
+              $ausgabe = 'Der Benutzer wurde Erstellt!';
+              $titleAusgabe = 'Success'
+
 
       }
       else
       {
+          $ausgabe = 'Die Validierung ist Fehlgschlagen!';
+          $titleAusgabe = 'Failed';
 
       }
 
-      //
+      $view = new View('ValidierungPage');
+      $view->title = $titleAusgabe;
+      $view->heading = $titleAusgabe;
+      $view->display();
 
-      $userrepository = new UserRepository();
-      $userid = $userrepository->create($firstName, $lastName, $email, $password)
+      // $view = new View('user_form');
+      // $view->title = 'Benutzer erstellen';
+      // $view->heading = 'Benutzer erstellen';
+      // $view->display();
 
-      // Seite mit Bestätigung.
 
-        $view = new View('user_form');
-        $view->title = 'Benutzer erstellen';
-        $view->heading = 'Benutzer erstellen';
-        $view->display();
+    }
+// Ende der Validierung
+
+    public function Logout(){
+
+      $_SESSION = [];
+      setcookie(session_name(),'',1);
+      header("location:/")
+
     }
 
     public function doLogin(){
