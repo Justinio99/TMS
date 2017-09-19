@@ -46,9 +46,9 @@
       <a><p><?php
 
         if(empty($user)) {
-          echo $user;
-        } else {
           echo 'Bitte Einloggen';
+        } else {
+          echo $user;
         }?>
       </p></a>
     <a href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true">    Log Out</i></a>

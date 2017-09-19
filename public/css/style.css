@@ -322,3 +322,14 @@ input:invalid {
 input:valid {
     border-color: green;
 }
+
+/*Ende Input Validierung*/
+
+
+/*ValidierungPage CSS*/
+
+#V-Meldung{
+  text-align: center;
+}
+
+/*Ende ValidierungPage CSS*/

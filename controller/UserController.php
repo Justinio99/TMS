@@ -36,9 +36,9 @@ class UserController
       // Benutzername Validierung
       if (isset($benutzername) && !empty($benutzername))
       {
-        if ($benutzername == $benutzerexist)
+        if ($benutzername != $benutzerexist)
         {
-          
+
         }
         else
         {

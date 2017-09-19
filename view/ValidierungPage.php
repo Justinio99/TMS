@@ -1,4 +1,3 @@
-
-<?= $ausgabe = 'Es ist ein Fehler aufgetreten.' ?>
-
-<h1><?= $ausgabe ?></h1>
+<div id="V-Meldung">
+  <h1><?= $ausgabe ?></h1>
+</div>
