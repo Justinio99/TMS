@@ -44,7 +44,7 @@
   <i class="fa fa-user-circle loginButton" aria-hidden="true"></i>
   <div class="dropdown-content">
       <a><p><?= $user ?></p></a>
-    <a href="#"><i class="fa fa-sign-out" aria-hidden="true">    Log Out</i></a>
+    <a href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true">    Log Out</i></a>
 
 
   </div>
