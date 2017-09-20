@@ -52,10 +52,17 @@ class UserRepository extends Repository
        $statement = ConnectionHandler::getConnection()->prepare($query);
 
        if ($statement->execute()){
-         while ($row = $statement->fetch()) {
-           array_push($users, $row['benutzername']);
-         }
+            /* bind result variables */
+            $statement->bind_result($name);
+
+            /* fetch values */
+            while ($statement->fetch()) {
+              array_push($users, $name);
+            }
        }
+
+       /* close statement */
+       $statement->close();
 
        return $users;
      }
