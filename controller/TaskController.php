@@ -155,4 +155,19 @@ class TaskController
 
      }
 
+     public function doDelete(){
+
+       if(isset($_GET['id'])) {
+         $id = $_GET['id'];
+
+        $taskrepository = new TaskRepository();
+        $taskrepository->delete($id);
+
+        header("location:/task/tasks");
+        die();
+
+       }
+
+     }
+
  }

@@ -7,7 +7,7 @@
       <label>Beschreibung:</label><p class=""><?php echo $value['beschreibung']; ?></p>
       <label>Datum:</label><p class=""><?php echo $value['startdatum']; ?></p>
       <label>Benutzer:</label><p class=""><?php echo $value['benutzername']; ?></p>
-      <i class="fa fa-trash-o trash" aria-hidden="true" onclick=""></i>
+      <a href="/task/doDelete?id=<?php echo $value['id'] ?>"><i class="fa fa-trash-o trash" aria-hidden="true"></i></a>
       </section>
   <?php endforeach; ?>
 
