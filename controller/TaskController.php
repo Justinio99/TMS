@@ -1,6 +1,7 @@
 <?php
 
 require_once '../repository/TaskRepository.php';
+require_once '/UserController.php';
 
 /**
  * Der Controller ist der Ort an dem es für jede Seite, welche der Benutzer
@@ -56,11 +57,16 @@ class TaskController
 
      public function tasks()
      {
+
+       $repo = new TaskRepository();
+       $tasks = $repo->getAllTasks();
+
          if (isset($_SESSION['logged_in_user'])) {
            $view = new View('Tasks');
            $view->title = 'Tasks';
            $view->user = $_SESSION['logged_in_user'];
            $view->heading = 'Tasks';
+           $view->tasks = $tasks;
            $view->display();
          } else {
 
@@ -101,11 +107,14 @@ class TaskController
 
 
      public function doCreateTask(){
-       $benutzername = $_POST['benutzername'];
-       $task = $_POST['taskTitel'];
-       $beschreibung = $_POST['beschreibung'];
-       $startdatum = $_POST['dateStart'];
-       $enddatum = $_POST['dateEnde'];
+
+       $UserController = new UserController;
+
+       $benutzername = $UserController->postCheck($_POST['benutzername']);
+       $task = $UserController->postCheck($_POST['taskTitel']);
+       $beschreibung = $UserController->postCheck($_POST['beschreibung']);
+       $startdatum = $UserController->postCheck($_POST['dateStart']);
+       $enddatum = $UserController->postCheck($_POST['dateEnde']);
 
        $TaskRepository = new TaskRepository();
        $Taskexist = $TaskRepository->selectTask($task);
@@ -143,6 +152,21 @@ class TaskController
        $view->ausgabe = $ausgabe;
        $view->heading = $titleAusgabe;
        $view->display();
+
+     }
+
+     public function doDelete(){
+
+       if(isset($_GET['id'])) {
+         $id = $_GET['id'];
+
+        $taskrepository = new TaskRepository();
+        $taskrepository->delete($id);
+
+        header("location:/task/tasks");
+        die();
+
+       }
 
      }
 

@@ -15,6 +15,11 @@ class UserController
         header('Location: /user/create');
     }
 
+    public function postCheck($string){
+      $prepareString = htmlspecialchars($string);
+      return $prepareString;
+
+    }
 
     public function erfassen()
     {
@@ -43,13 +48,16 @@ class UserController
     {
 
       //die("test");
-
+      $UserController = new UserController();
       // Werte aus $POST auslesen.
-      $benutzername = $_POST['benutzername'];
-      $vorname = $_POST['vorname'];
-      $nachname = $_POST['nachname'];
-      $password = $_POST['password'];
-      $passwordrepeat = $_POST['passwordrepeat'];
+      $benutzername = $UserController->postCheck($_POST['benutzername']);
+      $vorname = $UserController->postCheck($_POST['vorname']);
+      $nachname = $UserController->postCheck($_POST['nachname']);
+      $password = $UserController->postCheck($_POST['password']);
+      $passwordrepeat = $UserController->postCheck($_POST['passwordrepeat']);
+
+
+
       // validieren
 
 
@@ -118,8 +126,8 @@ class UserController
       $error = false;
       $loggedIn = false;
       foreach ($userRepository->readAll() as $user) {
-        if ($user->benutzername == $_POST['benutzername']) {
-          if ($user->passwort == sha1($_POST['passwort'])){
+        if ($user->benutzername == postCheck($_POST['benutzername'])) {
+          if ($user->passwort == postCheck(sha1($_POST['passwort']))){
             $_SESSION['logged_in_user'] = $user->benutzername;
             $loggedIn = true;
           } else {

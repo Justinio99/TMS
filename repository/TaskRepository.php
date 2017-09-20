@@ -40,6 +40,30 @@ class TaskRepository extends Repository
 
      }
 
+     public function getAllTasks(){
+       $tasks = [];
+
+       $query = "SELECT id,beschreibung,start_datum,benutzername from $this->tableName";
+       $statement = ConnectionHandler::getConnection()->prepare($query);
+
+       if ($statement->execute()){
+            /* bind result variables */
+            $statement->bind_result($id,$beschreibung, $startdatum, $benutzername);
+
+            // Datum umwandeln.
+
+            /* fetch values */
+            while ($statement->fetch()) {
+              array_push($tasks, ["id"=>$id,"beschreibung"=>$beschreibung, "startdatum"=>$startdatum, "benutzername"=>$benutzername]);
+            }
+       }
+
+       /* close statement */
+       $statement->close();
+
+       return $tasks;
+     }
+
      public function create($benutzername, $task, $beschreibung, $startdatum, $enddatum){
 
        //DD.MM.YYYY
@@ -60,6 +84,16 @@ class TaskRepository extends Repository
 
        return $statement->insert_id;
 
+     }
+
+     public function delete($id) {
+
+       $query = "DELETE FROM $this->tableName WHERE ID = ?";
+
+       $statement = ConnectionHandler::getConnection()->prepare($query);
+       $statement->bind_param('s',$id);
+
+       return $statement->execute();       
      }
 
 }
