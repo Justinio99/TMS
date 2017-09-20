@@ -112,35 +112,16 @@ class TaskController
 
        $AusgabeControl = 0;
 
-       if (empty($benutzername))
+       if (empty($benutzername) || empty($task) || empty($beschreibung) || empty($startdatum) || empty($enddatum))
        {
          $AusgabeControl = 1;
-         var_dump($benutzername);
-       }
-
-       if (empty($task))
-       {
-         $AusgabeControl = 1;
-         var_dump($task);
        }
        else {
          if (empty($Taskexist)){
            $AusgabeControl = 1;
-           echo 'HAllo Hugo';
          }
        }
 
-       if (empty($beschreibung)){
-         $AusgabeControl = 1;
-       }
-
-       if (empty($startdatum)){
-         $AusgabeControl = 1;
-       }
-
-       if (empty($enddatum)){
-         $AusgabeControl = 1;
-       }
 
        if ($AusgabeControl == 0)
        {

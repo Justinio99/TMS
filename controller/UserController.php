@@ -16,10 +16,31 @@ class UserController
     }
 
 
+    public function erfassen()
+    {
+   //  $user = $_SESSION['logged_in_user'];
+     if (!empty($user)){
+
+        $view = new View('BenutzerErfassen');
+        $view->title = 'Benutzer Erfassen';
+        $view->user = $_SESSION['logged_in_user'];
+        $view->heading = 'Benutzer Erfassen';
+        $view->display();
+
+    //
+     }
+     else{
+       $view = new View('BenutzerErfassen');
+       $view->title = 'Benutzer Erfassen';
+       //$view->user = $_SESSION['logged_in_user'];
+       $view->heading = 'Benutzer Erfassen';
+       $view->display();
+     }
+   }
 
 
-
-    public function doCreate(){
+    public function doCreate()
+    {
 
       //die("test");
 
@@ -35,46 +56,21 @@ class UserController
       $UserRepository = new UserRepository();
       $benutzerexist = $UserRepository->selectBenutzer($benutzername);
 
+      $AusgabeControl = 0;
 
       // Benutzername Validierung
-      if (isset($benutzername) && !empty($benutzername))
+      if (!isset($benutzername) || !isset($vorname) || !isset($nachname))
       {
-        if ($benutzername !== $benutzerexist)
-        {
-
-        }
-        else
-        {
+        $AusgabeControl = 1;
+      }
+      else if ($benutzerexist){
           $AusgabeControl = 1;
-        }
-      }
-      else
-      {
-        $AusgabeControl = 1;
-      }
-
-      // Vorname Validierung
-      if (isset($vorname) && !empty($vorname))
-      {}
-      else
-      {
-        $AusgabeControl = 1;
-      }
-
-      // Nachname Validierung
-      if (isset($nachname) && !empty($nachname))
-      {}
-      else
-      {
-        $AusgabeControl = 1;
       }
 
       // Passwort Validierung
-      if (isset($password) && !empty($password) && isset($passwordrepeat) && !empty($passwordrepeat))
+      if (isset($password) && isset($passwordrepeat))
       {
-        if ($password == $passwordrepeat)
-        {}
-        else
+        if ($password != $passwordrepeat)
         {
           $AusgabeControl = 1;
         }
@@ -84,17 +80,13 @@ class UserController
         $AusgabeControl = 1;
       }
 
-
-      if (empty($AusgabeControl))
+      if ($AusgabeControl == 0)
       {
-
               $userrepository = new UserRepository();
               $userid = $userrepository->create($benutzername, $vorname, $nachname, $password);
 
               $ausgabe = 'Der Benutzer wurde Erstellt!';
               $titleAusgabe = 'Success';
-
-
       }
       else
       {
@@ -109,14 +101,8 @@ class UserController
       $view->ausgabe = $ausgabe;
       $view->heading = $titleAusgabe;
       $view->display();
-
-      // $view = new View('user_form');
-      // $view->title = 'Benutzer erstellen';
-      // $view->heading = 'Benutzer erstellen';
-      // $view->display();
-
-
     }
+
 // Ende der Validierung
 
     public function Logout(){

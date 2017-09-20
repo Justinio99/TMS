@@ -70,13 +70,8 @@ class UserRepository extends Repository
 
     public function selectBenutzer($benutzername)
     {
-      $query = "SELECT 'benutzername' from $this->tableName where benutzername = ?";
-
-      $statement = ConnectionHandler::getConnection()->prepare($query);
-      $statement->bind_param('s',$benutzername);
-
-      return $statement->execute();
-
+      $users = $this->getAllUsers();
+      return in_array($benutzername, $users);
     }
 
 
