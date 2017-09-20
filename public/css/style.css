@@ -335,3 +335,13 @@ input:valid {
 }
 
 /*Ende ValidierungPage CSS*/
+
+/* PictureWork start */
+#pictureWork{
+
+  text-align: center;
+}
+img{
+      width: 496px;
+}
+/* PictureWork ende */
