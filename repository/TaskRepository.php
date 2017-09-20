@@ -44,10 +44,10 @@ class TaskRepository extends Repository
 
        //DD.MM.YYYY
        $timestamp1 = strtotime($startdatum);
-       $mysqldate1 = date( 'Y-m-d H:i:s', $timestamp );
+       $mysqldate1 = date( 'Y-m-d H:i:s', $timestamp1 );
 
        $timestamp2 = strtotime($enddatum);
-       $mysqldate2 = date( 'Y-m-d H:i:s', $timestamp );
+       $mysqldate2 = date( 'Y-m-d H:i:s', $timestamp2 );
 
        $query = "INSERT INTO $this->tableName (task_title, beschreibung, start_datum, end_datum, benutzername) VALUES (?,?,?,?,?)";
 

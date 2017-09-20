@@ -115,16 +115,18 @@ class TaskController
        if (empty($benutzername))
        {
          $AusgabeControl = 1;
-         echo $benutzername;
+         var_dump($benutzername);
        }
 
        if (empty($task))
        {
          $AusgabeControl = 1;
+         var_dump($task);
        }
        else {
-         if ($task == $Taskexist){
+         if (empty($Taskexist)){
            $AusgabeControl = 1;
+           echo 'HAllo Hugo';
          }
        }
 
