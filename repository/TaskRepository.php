@@ -82,6 +82,7 @@ class TaskRepository extends Repository
            throw new Exception($statement->error);
        }
 
+
        return $statement->insert_id;
 
      }
@@ -93,7 +94,7 @@ class TaskRepository extends Repository
        $statement = ConnectionHandler::getConnection()->prepare($query);
        $statement->bind_param('s',$id);
 
-       return $statement->execute();       
+       return $statement->execute();
      }
 
 }
