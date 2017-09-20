@@ -40,6 +40,30 @@ class TaskRepository extends Repository
 
      }
 
+     public function getAllTasks(){
+       $tasks = [];
+
+       $query = "SELECT beschreibung,start_datum,benutzername from $this->tableName";
+       $statement = ConnectionHandler::getConnection()->prepare($query);
+
+       if ($statement->execute()){
+            /* bind result variables */
+            $statement->bind_result($beschreibung, $startdatum, $benutzername);
+
+            // Datum umwandeln.
+
+            /* fetch values */
+            while ($statement->fetch()) {
+              array_push($tasks, ["beschreibung"=>$beschreibung, "startdatum"=>$startdatum, "benutzername"=>$benutzername]);
+            }
+       }
+
+       /* close statement */
+       $statement->close();
+
+       return $tasks;
+     }
+
      public function create($benutzername, $task, $beschreibung, $startdatum, $enddatum){
 
        //DD.MM.YYYY

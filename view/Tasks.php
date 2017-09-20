@@ -1,11 +1,14 @@
 
 <article style="margin:15px" body{overflow:scroll}>
 
-  <section>
-    <label>Beschreibung:</label><p class="p">reaks to two columns without needing extra elements, classes, or JS</p>
-    <label>Datum:</label><p  class="p">20.9</p>
-    <label>Benuter:</label><p class="p">Justin</p>
-    <i class="fa fa-trash-o trash" aria-hidden="true" onclick=""></i>
-  </section>
+  <?php foreach($tasks as $key=>$value): ?>
+      
+      <section>
+      <label>Beschreibung:</label><p class=""><?php echo $value['beschreibung']; ?></p>
+      <label>Datum:</label><p class=""><?php echo $value['startdatum']; ?></p>
+      <label>Benutzer:</label><p class=""><?php echo $value['benutzername']; ?></p>
+      <i class="fa fa-trash-o trash" aria-hidden="true" onclick=""></i>
+      </section>
+  <?php endforeach; ?>
 
 </article>
